@@ -33,7 +33,7 @@ const AddJewelry = () => {
                         timer: 2000
                     })
                     reset();
-                    navigate('/my-jewelries');
+                    navigate('/my-jewelry');
                 }
             })
     };

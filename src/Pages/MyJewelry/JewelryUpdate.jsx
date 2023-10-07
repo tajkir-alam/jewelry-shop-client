@@ -6,15 +6,15 @@ import useTitle from '../../hooks/useTitle';
 
 
 const JewelryUpdate = () => {
-    const loadToys = useLoaderData();
-    useTitle(loadToys.name);
+    const loadJewelry = useLoaderData();
+    useTitle(loadJewelry.name);
 
     const navigate = useNavigate()
 
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         data.price = parseFloat(data.price);
-        fetch(`https://trov-titans-server-data-tajkir-alam.vercel.app/alltoys/${loadToys._id}`, {
+        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry/${loadJewelry._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',
@@ -31,7 +31,7 @@ const JewelryUpdate = () => {
                         timer: 2000
                     })
                     reset();
-                    navigate(`/toy/${loadToys._id}`);
+                    navigate(`/toy/${loadJewelry._id}`);
                 }
             })
     };
