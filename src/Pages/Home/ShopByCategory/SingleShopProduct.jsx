@@ -6,10 +6,11 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const SingleShopProduct = ({ eachProduct }) => {
+    const { user } = useContext(AuthContext);
+
 
     const { picture, name, price, ratings, _id } = eachProduct;
 
-    const { user } = useContext(AuthContext);
 
     const sendAlert = () => {
         Swal.fire({
@@ -18,6 +19,7 @@ const SingleShopProduct = ({ eachProduct }) => {
             icon: 'warning',
             confirmButtonText: 'Please Login'
         })
+
     }
 
     return (
@@ -41,7 +43,7 @@ const SingleShopProduct = ({ eachProduct }) => {
                     {user ?
                         <Link to={`/jewelry/${_id}`} className="btn btn-error w-full text-white tracking-wider font-semibold shadow-md">View Details</Link>
                         :
-                        <Link onClick={sendAlert } to={`/jewelry/${_id}`} className="btn btn-error w-full text-white tracking-wider font-semibold shadow-md">View Details</Link>
+                        <Link onClick={sendAlert} to={`/jewelry/${_id}`} className="btn btn-error w-full text-white tracking-wider font-semibold shadow-md">View Details</Link>
                     }
                 </div>
             </div>

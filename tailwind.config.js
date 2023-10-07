@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'bg-sales': "url('./src/assets/gallery7.jpg')"
-      },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       }
