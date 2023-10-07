@@ -27,7 +27,7 @@ const AllJewelry = () => {
     }
 
     return (
-        <div>
+        <div className='py-5'>
             <section className='text-center text-5xl text-white font-semibold my-12 bg-[#e4132bd2] py-10 uppercase tracking-widest shadow-xl'>
                 <span className="drop-shadow-md">
                     Our Luxury Jewels

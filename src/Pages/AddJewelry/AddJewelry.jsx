@@ -40,7 +40,7 @@ const AddJewelry = () => {
 
     return (
         <>
-            <div className="bg-slate-200 p-2 lg:p-12 mt-10">
+            <div className="bg-slate-200 p-2 lg:p-12">
                 <div className='custom-container bg-slate-100 rounded-lg shadow-md drop-shadow-md p-4 lg:p-10 tracking-wider'>
                     <h1 className='text-2xl lg:text-5xl text-slate-600 text-center font-semibold mb-4'>Add A New Product</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
