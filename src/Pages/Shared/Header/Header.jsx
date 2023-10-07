@@ -15,11 +15,11 @@ const Header = () => {
 
     const navItems = () => <>
         <li><NavLink to={'/'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>Home</NavLink></li>
-        <li><NavLink to={'/alltoys'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>All Jewelry</NavLink></li>
+        <li><NavLink to={'/all-jewelry'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>All Jewelry</NavLink></li>
         {user &&
             <>
-                <li><NavLink to={'/mytoys'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>My Jewelry</NavLink></li>
-                <li><NavLink to={'/addtoy'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>Add a Jewelry</NavLink></li>
+                <li><NavLink to={'/my-jewelry'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>My Jewelry</NavLink></li>
+                <li><NavLink to={'/add-jewelry'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>Add a Jewelry</NavLink></li>
             </>
         }
         <li><NavLink to={'/blogs'} className={({ isActive }) => isActive ? "active font-bold" : "hover:bg-transparent"}>Blogs</NavLink></li>
