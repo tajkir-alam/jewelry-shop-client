@@ -54,6 +54,10 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 const user = result.user;
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Signed in successfully'
+                });
                 navigate(from, { replace: true });
                 setLoader(false);
             })
@@ -66,7 +70,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="bg-slate-200 p-2 lg:p-12 mt-10 ">
+            <div className="bg-slate-200 p-2 lg:p-12">
                 <div className='bg-slate-100 lg:w-2/4 mx-auto rounded-lg shadow-md drop-shadow-md p-4 lg:px-10 lg:py-24 tracking-wider'>
                     <h1 className='text-2xl lg:text-5xl text-slate-600 text-center font-semibold mb-4 underline'>Sign In</h1>
                     <div className='grid justify-center mt-8'>
@@ -93,7 +97,7 @@ const Login = () => {
                         }
 
                         <div className="divider font-semibold text-yellow-600">
-                            Don't have an account?<Link to={'/registration'} className='text-blue-500'>Signup here</Link>
+                            Don't have an account?<Link to={'/signup'} className='text-blue-500'>Signup here</Link>
                         </div>
 
                         {errors.exampleRequired && <span>This field is required</span>}

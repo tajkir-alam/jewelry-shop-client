@@ -5,8 +5,8 @@ import Home from "../Pages/Home/Home/Home";
 // import MyToys from "../Pages/MyToys/MyToys";
 // import Blogs from "../Pages/Blogs/Blogs";
 // import AddToy from "../Pages/AddToy/AddToy";
-// import Login from "../Pages/AccessAuthorize/Login/Login";
 import Registration from "../Pages/AccessAuthorize/Registration/Registration";
+import Login from "../Pages/AccessAuthorize/Login/Login";
 // import SingleToy from "../Pages/SingleToy/SingleToy";
 // import PrivateRoute from "./PrivateRoute";
 // import ToyUpdate from "../Pages/MyToys/ToyUpdate";
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                // element: <Login></Login>
+                element: <Login></Login>
             },
             {
                 path: '/signup',
