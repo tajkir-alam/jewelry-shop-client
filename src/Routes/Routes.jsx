@@ -2,15 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import AllJewelry from "../Pages/AllJewelry/AllJewelry";
-// import MyToys from "../Pages/MyToys/MyToys";
 // import Blogs from "../Pages/Blogs/Blogs";
 import Registration from "../Pages/AccessAuthorize/Registration/Registration";
 import Login from "../Pages/AccessAuthorize/Login/Login";
 import PrivateRoute from "./PrivateRoute";
-// import ToyUpdate from "../Pages/MyToys/ToyUpdate";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import SingleJewelry from "../Pages/SingleToy/SingleToy";
+import SingleJewelry from "../Pages/SingleJewelry/SingleJewelry";
 import AddJewelry from "../Pages/AddJewelry/AddJewelry";
+import MyJewelry from "../Pages/MyJewelry/MyJewelry";
+import JewelryUpdate from "../Pages/MyJewelry/JewelryUpdate";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-jewelry',
-                // element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+                element: <PrivateRoute><MyJewelry></MyJewelry></PrivateRoute>
             },
             {
                 path: '/add-jewelry',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/update-jewelry/:id',
-                // element: <ToyUpdate></ToyUpdate>,
+                element: <JewelryUpdate></JewelryUpdate>,
                 loader: ({ params }) => fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry/${params.id}`)
             }
         ]

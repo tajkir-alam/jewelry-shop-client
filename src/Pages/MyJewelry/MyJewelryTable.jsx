@@ -2,7 +2,8 @@ import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
-const JewelryTable = ({ singleJewelry }) => {
+const MyJewelryTable = ({ singleJewelry, handleDelete }) => {
+
     const { sellerName, name, subCategory, price, quantity, picture, _id } = singleJewelry;
 
     return (
@@ -26,12 +27,17 @@ const JewelryTable = ({ singleJewelry }) => {
                 <td>{subCategory}</td>
                 <td>${price}</td>
                 <td>{quantity}</td>
-                <td>
-                    <Link to={`/jewelry/${_id}`} className="btn btn-error w-full text-white tracking-wider font-semibold shadow-md">View Details</Link>
+                <td className='grid grid-cols-2 gap-2'>
+                    <Link to={`/update-jewelry/${_id}`} className="btn btn-success text-white tracking-wide">
+                        Update
+                    </Link>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-error text-white tracking-wide">
+                        Delete
+                    </button>
                 </td>
             </tr>
         </>
     );
 };
 
-export default JewelryTable;
+export default MyJewelryTable;
