@@ -7,9 +7,9 @@ import MyJewelryTable from './MyJewelryTable';
 const MyJewelry = () => {
     useTitle('My Toys');
     const [showProducts, setShowProducts] = useState(1);
-    
+
     const [loadJewelry, setLoadJewelry] = useState([]);
-    
+
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
@@ -57,10 +57,10 @@ const MyJewelry = () => {
 
 
     return (
-        <div>
+        <div className='py-5'>
             <section className='text-center text-5xl text-white font-semibold my-12 bg-[#e4132bd2] py-10 uppercase tracking-widest shadow-xl'>
                 <span className="drop-shadow-md">
-                    My Jewelries 
+                    My Jewelries
                 </span>
             </section>
 
