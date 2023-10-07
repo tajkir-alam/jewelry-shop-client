@@ -49,12 +49,12 @@ const router = createBrowserRouter([
             {
                 path: '/jewelry/:id',
                 // element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://trov-titans-server-data.vercel.app/alltoys/${params.id}`)
+                loader: ({ params }) => fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry/${params.id}`)
             },
             {
                 path: '/update-jewelry/:id',
                 // element: <ToyUpdate></ToyUpdate>,
-                loader: ({ params }) => fetch(`https://trov-titans-server-data.vercel.app/alltoys/${params.id}`)
+                loader: ({ params }) => fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry/${params.id}`)
             }
         ]
     },

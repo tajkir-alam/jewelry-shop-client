@@ -11,7 +11,7 @@ const AllJewelry = () => {
     const [searchProducts, setSearchProducts] = useState('')
 
     useEffect(() => {
-        fetch(`https://trov-titans-server-data-tajkir-alam.vercel.app/alltoys?limit=${showProducts}&searchtoy=${searchProducts}`)
+        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry?limit=${showProducts}&searchtoy=${searchProducts}`)
             .then(res => res.json())
             .then(data => setLoadToys(data));
     }, [showProducts, searchProducts])

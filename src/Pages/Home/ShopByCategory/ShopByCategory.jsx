@@ -10,7 +10,7 @@ const ShopByCategory = () => {
     const [nameIs, setNameIs] = useState('');
 
     useEffect(() => {
-        fetch(`https://trov-titans-server-data-tajkir-alam.vercel.app/alltoys?limit=2&categoryname=${nameIs}`)
+        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry?limit=2&categoryname=${nameIs}`)
             .then(res => res.json())
             .then(data => setLoadShopProduct(data));
     }, [nameIs])
@@ -24,9 +24,9 @@ const ShopByCategory = () => {
 
             <Tabs>
                 <TabList className='text-center text-[#e4132bd2] text-xl font-semibold divider'>
-                    <Tab onClick={() => setNameIs('Marvel')}>Cuffs</Tab>
-                    <Tab onClick={() => setNameIs('Transformers')}>Necklace</Tab>
-                    <Tab onClick={() => setNameIs('StarWars')}>Studs</Tab>
+                    <Tab onClick={() => setNameIs('Stud')}>Cuffs</Tab>
+                    <Tab onClick={() => setNameIs('Necklaces')}>Necklace</Tab>
+                    <Tab onClick={() => setNameIs('Cuffs')}>Studs</Tab>
                 </TabList>
                 <TabPanel className='shadow-xl rounded-xl'>
                     <div className='grid lg:grid-cols-2 gap-5 p-4 justify-center items-center'>
