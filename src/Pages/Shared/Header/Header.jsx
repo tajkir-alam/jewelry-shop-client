@@ -56,7 +56,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to={'/'} className="flex items-center btn btn-ghost h-full">
-                    <img src={logo} alt="TrovTitansLogo" className='lg:h-20 p-3 lg:p-0 pl-1 lg:pl-0 md:p-2' />
+                    <img src={logo} alt="TrovTitansLogo" className='h-20 p-3 lg:p-0 pl-1 lg:pl-0 md:p-2' />
                     <h3 className='text-xs font-bold text-center hidden md:block'>The Jewelry <br /> Army</h3>
                 </Link>
             </div>
@@ -67,7 +67,7 @@ const Header = () => {
             </div>
             <div className="navbar-end gap-2">
                 <div className='flex'>
-                    <span className='hidden md:block'>{navAccessBtn()}</span>
+                    <span className='flex gap-2'>{navAccessBtn()}</span>
                 </div>
                 {user &&
                     <div className="dropdown dropdown-end">
