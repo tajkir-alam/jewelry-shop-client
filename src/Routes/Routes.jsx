@@ -4,13 +4,13 @@ import Home from "../Pages/Home/Home/Home";
 import AllJewelry from "../Pages/AllJewelry/AllJewelry";
 // import MyToys from "../Pages/MyToys/MyToys";
 // import Blogs from "../Pages/Blogs/Blogs";
-// import AddToy from "../Pages/AddToy/AddToy";
 import Registration from "../Pages/AccessAuthorize/Registration/Registration";
 import Login from "../Pages/AccessAuthorize/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 // import ToyUpdate from "../Pages/MyToys/ToyUpdate";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import SingleJewelry from "../Pages/SingleToy/SingleToy";
+import AddJewelry from "../Pages/AddToy/AddToy";
 
 const router = createBrowserRouter([
     {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add-jewelry',
-                // element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
+                element: <PrivateRoute><AddJewelry></AddJewelry></PrivateRoute>
             },
             {
                 path: '/blogs',
