@@ -2,8 +2,8 @@ import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
-const JewelryTable = ({ singleToys }) => {
-    const { sellerName, name, subCategory, price, quantity, picture, _id } = singleToys;
+const JewelryTable = ({ singleJewelry }) => {
+    const { sellerName, name, subCategory, price, quantity, picture, _id } = singleJewelry;
 
     return (
         <>

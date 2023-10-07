@@ -7,10 +7,10 @@ import AllJewelry from "../Pages/AllJewelry/AllJewelry";
 // import AddToy from "../Pages/AddToy/AddToy";
 import Registration from "../Pages/AccessAuthorize/Registration/Registration";
 import Login from "../Pages/AccessAuthorize/Login/Login";
-// import SingleToy from "../Pages/SingleToy/SingleToy";
-// import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 // import ToyUpdate from "../Pages/MyToys/ToyUpdate";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import SingleJewelry from "../Pages/SingleToy/SingleToy";
 
 const router = createBrowserRouter([
     {
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/jewelry/:id',
-                // element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
+                element: <PrivateRoute><SingleJewelry></SingleJewelry></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry/${params.id}`)
             },
             {

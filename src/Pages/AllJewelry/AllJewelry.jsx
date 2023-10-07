@@ -5,15 +5,15 @@ import useTitle from '../../hooks/useTitle';
 
 const AllJewelry = () => {
     useTitle('All Jewelry')
-    const [loadToys, setLoadToys] = useState([]);
+    const [loadJewelry, setLoadJewelry] = useState([]);
 
     const [showProducts, setShowProducts] = useState(20);
     const [searchProducts, setSearchProducts] = useState('')
 
     useEffect(() => {
-        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry?limit=${showProducts}&searchtoy=${searchProducts}`)
+        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry?limit=${showProducts}&searchjewelry=${searchProducts}`)
             .then(res => res.json())
-            .then(data => setLoadToys(data));
+            .then(data => setLoadJewelry(data));
     }, [showProducts, searchProducts])
 
     const productsLimit = e => {
@@ -66,7 +66,7 @@ const AllJewelry = () => {
                         </thead>
                         <tbody>
                             {
-                                loadToys.map(singleToys => <JewelryTable key={singleToys._id} singleToys={singleToys}></JewelryTable>)
+                                loadJewelry.map(singleJewelry => <JewelryTable key={singleJewelry._id} singleJewelry={singleJewelry}></JewelryTable>)
                             }
                         </tbody>
                     </table>
