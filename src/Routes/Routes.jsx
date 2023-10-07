@@ -6,7 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 // import Blogs from "../Pages/Blogs/Blogs";
 // import AddToy from "../Pages/AddToy/AddToy";
 // import Login from "../Pages/AccessAuthorize/Login/Login";
-// import Registration from "../Pages/AccessAuthorize/Registration/Registration";
+import Registration from "../Pages/AccessAuthorize/Registration/Registration";
 // import SingleToy from "../Pages/SingleToy/SingleToy";
 // import PrivateRoute from "./PrivateRoute";
 // import ToyUpdate from "../Pages/MyToys/ToyUpdate";
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/signup',
-                // element: <Registration></Registration>
+                element: <Registration></Registration>
             },
             {
                 path: '/jewelry/:id',
