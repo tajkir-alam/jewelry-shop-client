@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-// import ShopByCategory from '../ShopByCategory/ShopByCategory';
+import ShopByCategory from '../ShopByCategory/ShopByCategory';
 // import ExtraSection from '../ExtraSection/ExtraSection';
 // import useTitle from '../../../hooks/useTitle';
 
@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            {/* <ShopByCategory></ShopByCategory> */}
+            <ShopByCategory></ShopByCategory>
             {/* <ExtraSection></ExtraSection> */}
         </div>
     );
