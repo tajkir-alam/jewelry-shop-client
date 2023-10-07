@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Pages/Home/Home/Home";
-// import AllToys from "../Pages/AllToys/AllToys";
+import AllJewelry from "../Pages/AllJewelry/AllJewelry";
 // import MyToys from "../Pages/MyToys/MyToys";
 // import Blogs from "../Pages/Blogs/Blogs";
 // import AddToy from "../Pages/AddToy/AddToy";
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/all-jewelry',
-                // element: <AllToys></AllToys>
+                element: <AllJewelry></AllJewelry>
             },
             {
                 path: '/my-jewelry',
