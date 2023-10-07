@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import JewelryTable from './JewelryTable';
 import { FaSearch } from 'react-icons/fa';
-// import useTitle from '../../hooks/useTitle';
+import useTitle from '../../hooks/useTitle';
 
 const AllJewelry = () => {
-    // useTitle('All Toys')
+    useTitle('All Jewelry')
     const [loadToys, setLoadToys] = useState([]);
 
     const [showProducts, setShowProducts] = useState(20);
