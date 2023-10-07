@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 const Registration = () => {
     const [Error, setError] = useState('');
 
-    const { emailSignup, googleLogin, logOut } = useContext(AuthContext);
+    const { emailSignup, googleLogin, logOut, setLoader } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const delayNavigate = () => {
@@ -32,6 +32,10 @@ const Registration = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         setError('');
+        if (data.password !== data.confirmPassword) {
+            setError("Password Doesen't Match");
+            return;
+        }
         emailSignup(data.email, data.password, data.name, data.img)
             .then(result => {
                 const user = result.user;
@@ -94,6 +98,10 @@ const Registration = () => {
                             <div className="space-y-1">
                                 <label htmlFor="password" className='block font-medium ml-1'>Enter your password</label>
                                 <input {...register("password")} required id="" placeholder='Enter password' className='py-2 px-3 shadow-lg border-2 outline-none rounded-md w-full' />
+                            </div>
+                            <div className="space-y-1">
+                                <label htmlFor="confirmPassword" className='block font-medium ml-1'>Confirm your password</label>
+                                <input {...register("confirmPassword")} required id="" placeholder='Confirm password' className='py-2 px-3 shadow-lg border-2 outline-none rounded-md w-full' />
                             </div>
                             <div className="space-y-1">
                                 <label htmlFor="img" className='block font-medium ml-1'>Enter a valid image URL</label>
