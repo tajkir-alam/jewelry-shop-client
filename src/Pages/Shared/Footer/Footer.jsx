@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="p-10 lg:px-0 bg-base-200 text-base-content mt-12">
             <div className='footer custom-container grid grid-cols-2 items-center lg:grid-cols-4'>
                 <Link to={'/'}>
-                    <img src={logo} alt="" className='h-20' />
+                    <img src={logo} alt="" className='h-24 w-full' />
                     <p>The Jewelry Army<br />You Jewels partner</p>
                 </Link>
                 <div>
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className='border-t border-base-300 text-center mt-4 pt-4'>Copyright © 2023 - All right reserved by Trov Titans / <a href='https://www.linkedin.com/in/tajkir-alam/' >MD Tajkir Alam Rion</a></p>
+            <p className='border-t border-base-300 text-center mt-4 pt-4'>Copyright © 2023 - All right reserved by <a href='https://www.linkedin.com/in/tajkir-alam/' target='_blank' className='font-medium hover:opacity-80 duration-300' >MD Tajkir Alam Rion</a></p>
         </footer>
     );
 };
