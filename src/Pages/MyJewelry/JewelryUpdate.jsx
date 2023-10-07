@@ -31,7 +31,7 @@ const JewelryUpdate = () => {
                         timer: 2000
                     })
                     reset();
-                    navigate(`/toy/${loadJewelry._id}`);
+                    navigate(`/all-jewelry/${loadJewelry._id}`);
                 }
             })
     };

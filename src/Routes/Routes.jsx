@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import AllJewelry from "../Pages/AllJewelry/AllJewelry";
-// import Blogs from "../Pages/Blogs/Blogs";
+import Blogs from "../Pages/Blogs/Blogs";
 import Registration from "../Pages/AccessAuthorize/Registration/Registration";
 import Login from "../Pages/AccessAuthorize/Login/Login";
 import PrivateRoute from "./PrivateRoute";
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blogs',
-                // element: <Blogs></Blogs>
+                element: <Blogs></Blogs>
             },
             {
                 path: '/login',
