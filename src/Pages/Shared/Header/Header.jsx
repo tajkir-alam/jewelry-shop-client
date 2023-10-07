@@ -31,7 +31,7 @@ const Header = () => {
                 <NavLink to={'/login'} className={({ isActive }) => isActive ? 'active-secondary' : 'common-active-secondary'}>
                     Login
                 </NavLink>
-                <NavLink to={'/registration'} className={({ isActive }) => isActive ? 'active-secondary' : 'common-active-secondary'}>
+                <NavLink to={'/signup'} className={({ isActive }) => isActive ? 'active-secondary' : 'common-active-secondary'}>
                     Signup
                 </NavLink>
             </>
@@ -55,7 +55,10 @@ const Header = () => {
                         {navAccessBtn()}
                     </ul>
                 </div>
-                <Link to={'/'} ><img src={logo} alt="TrovTitansLogo" className='lg:h-14 btn btn-ghost p-3 pl-1 md:p-2' /></Link>
+                <Link to={'/'} className="flex items-center btn btn-ghost h-full">
+                    <img src={logo} alt="TrovTitansLogo" className='lg:h-20 p-3 lg:p-0 pl-1 lg:pl-0 md:p-2' />
+                    <h3 className='text-xs font-bold text-center hidden md:block'>The Jewelry <br /> Army</h3>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -83,7 +86,7 @@ const Header = () => {
                                 </a>
                             </li>
                             <li><a>Settings</a></li>
-                            <li><NavLink onClick={signOut}>Logout</NavLink></li>  
+                            <li><NavLink onClick={signOut}>Logout</NavLink></li>
                         </ul>
                     </div>
                 }
