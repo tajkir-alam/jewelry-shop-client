@@ -62,9 +62,15 @@ const DashboardLayout = () => {
 
                     {/* Task list and particular route */}
                     <li>
-                        <NavLink to='/dashboard/cart' className='flex gap-3 items-center text-2xl font-medium hover:text-white hover:bg-slate-800'>
+                        <NavLink to='/dashboard' className={({isActive}) => isActive ? 'text-yellow-300 flex gap-3 items-center text-xl font-medium hover:text-white hover:bg-slate-800' : 'flex gap-3 items-center text-xl font-medium hover:text-white hover:bg-slate-800'}>
                             <FaCartPlus />
                             Cart
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/purchase-items' className={({isActive}) => isActive ? 'text-yellow-300 flex gap-3 items-center text-xl font-medium hover:text-white hover:bg-slate-800' : 'flex gap-3 items-center text-xl font-medium hover:text-white hover:bg-slate-800'}>
+                            <FaCartPlus />
+                            Purchase History
                         </NavLink>
                     </li>
                 </ul>
