@@ -11,6 +11,7 @@ import SingleJewelry from "../Pages/SingleJewelry/SingleJewelry";
 import AddJewelry from "../Pages/AddJewelry/AddJewelry";
 import MyJewelry from "../Pages/MyJewelry/MyJewelry";
 import JewelryUpdate from "../Pages/MyJewelry/JewelryUpdate";
+import DashboardLayout from "../layout/DashboardLayout";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,17 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/dashboard',
+        element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: '/dashboard',
+                element: <Login />
+            }
+        ]
+    }
 ]);
 
 export default router;
