@@ -2,12 +2,46 @@ import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 const SingleJewelry = () => {
     const loadJewelry = useLoaderData();
-    const { picture, name, sellerName, sellerEmail, price, ratings, quantity, details } = loadJewelry;
-
+    const { picture, name, sellerName, sellerEmail, price, ratings, quantity, details, _id } = loadJewelry;
     useTitle(name);
+
+    const handleCart = () => {
+        const itemInfo = {
+            picture,
+            name,
+            sellerName,
+            sellerEmail,
+            price,
+            ratings,
+            quantity,
+            details,
+            id: _id,
+        }
+
+        fetch('https://jewelry-shop-client-side.vercel.app/cart', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(itemInfo),
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Item Added to Cart',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+            })
+    }
 
     return (
         <div className='custom-container py-8'>
@@ -30,7 +64,9 @@ const SingleJewelry = () => {
                         </div>
                         <div className='grid grid-cols-2 gap-3'>
                             <button className='btn btn-error text-white tracking-widest w-full'>Buy Now</button>
-                            <button className='btn btn-success text-white tracking-widest w-full'>Add To Cart</button>
+                            <button className='btn btn-success text-white tracking-widest w-full' onClick={handleCart}>
+                                Add To Cart
+                            </button>
                         </div>
                         <p>
                             <b>Description: </b>

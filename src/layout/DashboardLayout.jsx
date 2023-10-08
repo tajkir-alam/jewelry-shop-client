@@ -34,7 +34,7 @@ const DashboardLayout = () => {
                                 <div className="w-10 rounded-full">
                                     <div className="group">
                                         <img src={user.photoURL} />
-                                        <p className='opacity-0 group-hover:opacity-100 absolute text-2xl text-error font-semibold z-30'>{user.displayName}</p>
+                                        <p className='opacity-0 group-hover:opacity-100 absolute text-2xl text-error font-semibold z-30 duration-300'>{user.displayName}</p>
                                     </div>
                                 </div>
                             </label>
