@@ -1,11 +1,13 @@
 import { Rating } from '@smastrom/react-rating';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const SingleJewelry = () => {
     const loadJewelry = useLoaderData();
+    const { user } = useContext(AuthContext);
     const { picture, name, sellerName, sellerEmail, price, ratings, quantity, details, _id } = loadJewelry;
     useTitle(name);
 
@@ -20,6 +22,7 @@ const SingleJewelry = () => {
             quantity,
             details,
             id: _id,
+            userEmail: user.email
         }
 
         fetch('https://jewelry-shop-client-side.vercel.app/cart', {
@@ -62,12 +65,11 @@ const SingleJewelry = () => {
                                 readOnly
                             />
                         </div>
-                        <div className='grid grid-cols-2 gap-3'>
-                            <button className='btn btn-error text-white tracking-widest w-full'>Buy Now</button>
-                            <button className='btn btn-success text-white tracking-widest w-full' onClick={handleCart}>
-                                Add To Cart
-                            </button>
-                        </div>
+                        {/* <div className='grid grid-cols-2 gap-3'> */}
+                        <button className='btn btn-success hover:opacity-80 text-white tracking-widest w-full' onClick={handleCart}>
+                            Add To Cart
+                        </button>
+                        {/* </div> */}
                         <p>
                             <b>Description: </b>
                             {details}

@@ -10,8 +10,8 @@
 }
 
 .active {
-    color: #e4132c;
-    background: transparent;
+    color: #e4132c  !important;
+    background: transparent !important;
 }
 
 .active-secondary {
