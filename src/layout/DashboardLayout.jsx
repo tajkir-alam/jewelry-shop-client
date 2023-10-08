@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaCartPlus } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 
@@ -25,7 +25,7 @@ const DashboardLayout = () => {
                         <FaBars className='text-2xl text-black/70 dark:text-slate-300' />
                     </label>
                     <h2 className='text-2xl flex-1 text-center'>
-                        Welcome To Dashboard
+                        Welcome To The Dashboard
                     </h2>
 
                     {user &&
@@ -38,8 +38,8 @@ const DashboardLayout = () => {
                                     </div>
                                 </div>
                             </label>
-                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-50">
+                                <li><NavLink to='/'>Home</NavLink></li>
                                 <li><a>Settings</a></li>
                                 <li><button onClick={signOut}>Logout</button></li>
                             </ul>
@@ -54,14 +54,19 @@ const DashboardLayout = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 min-h-full bg-slate-900 text-white text-lg tracking-widest gap-4 ">
                     {/* Sidebar content here */}
-                    <h2 className='text-3xl text-center font-semibold mt-5 mb-12'>
+                    <h2 className='text-4xl text-center font-semibold mt-5 mb-12'>
                         <span className="text-orange-300">
                             The</span> Jewelry <span className="text-sky-300">Army
                         </span>
                     </h2>
 
                     {/* Task list and particular route */}
-                    <NavLink to='/'>Dashboard</NavLink>
+                    <li>
+                        <NavLink to='/dashboard/cart' className='flex gap-3 items-center text-2xl font-medium hover:text-white hover:bg-slate-800'>
+                            <FaCartPlus />
+                            Cart
+                        </NavLink>
+                    </li>
                 </ul>
 
             </div>

@@ -12,6 +12,7 @@ import AddJewelry from "../Pages/AddJewelry/AddJewelry";
 import MyJewelry from "../Pages/MyJewelry/MyJewelry";
 import JewelryUpdate from "../Pages/MyJewelry/JewelryUpdate";
 import DashboardLayout from "../layout/DashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <Login />
+                element: <Dashboard />
             }
         ]
     }
