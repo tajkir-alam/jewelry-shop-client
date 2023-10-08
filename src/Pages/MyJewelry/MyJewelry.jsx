@@ -5,7 +5,7 @@ import useTitle from '../../hooks/useTitle';
 import MyJewelryTable from './MyJewelryTable';
 
 const MyJewelry = () => {
-    useTitle('My Toys');
+    useTitle('My Jewelry');
     const [showProducts, setShowProducts] = useState(1);
 
     const [loadJewelry, setLoadJewelry] = useState([]);
@@ -13,7 +13,7 @@ const MyJewelry = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry?email=${user && user.email}&sorttoys=${showProducts}`)
+        fetch(`https://jewelry-shop-client-side.vercel.app/all-jewelry?email=${user && user.email}&sortjewelry=${showProducts}`)
             .then(res => res.json())
             .then(data => setLoadJewelry(data));
     }, [showProducts])

@@ -56,7 +56,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to={'/'} className="flex items-center btn btn-ghost h-full">
-                    <img src={logo} alt="TrovTitansLogo" className='h-20 p-3 lg:p-0 pl-1 lg:pl-0 md:p-2' />
+                    <img src={logo} alt="JewelryShop logo" className='h-20 p-3 lg:p-0 pl-1 lg:pl-0 md:p-2' />
                     <h3 className='text-xs font-bold text-center hidden md:block'>The Jewelry <br /> Army</h3>
                 </Link>
             </div>
