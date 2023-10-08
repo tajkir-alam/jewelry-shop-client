@@ -47,8 +47,8 @@ const MyJewelry = () => {
                                     showConfirmButton: false,
                                     timer: 2000
                                 })
-                                const remainingToys = loadJewelry.filter(toys => toys._id !== id);
-                                setLoadJewelry(remainingToys);
+                                const remainingJewelry = loadJewelry.filter(jewelry => jewelry._id !== id);
+                                setLoadJewelry(remainingJewelry);
                             }
                         })
                 }

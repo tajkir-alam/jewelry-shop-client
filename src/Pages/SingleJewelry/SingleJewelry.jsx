@@ -8,7 +8,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const SingleJewelry = () => {
     const loadJewelry = useLoaderData();
     const { user } = useContext(AuthContext);
-    const { picture, name, sellerName, sellerEmail, price, ratings, quantity, details, _id } = loadJewelry;
+    const { picture, name, sellerName, sellerEmail, price, ratings, quantity, details, subCategory, _id } = loadJewelry;
     useTitle(name);
 
     const handleCart = () => {
@@ -19,9 +19,9 @@ const SingleJewelry = () => {
             sellerEmail,
             price,
             ratings,
-            quantity,
             details,
             id: _id,
+            subCategory,
             userEmail: user.email
         }
 
